@@ -1,0 +1,11 @@
+Step 1: Set up docker
+https://docs.docker.com/engine/getstarted/step_one/
+
+Step 2: Clone the cFS repo into ./shared_env
+
+Step 3: Run build_image.sh
+
+Step 4: Run run_container.sh
+
+Step 5: You are now in a chroot ready to build and run cFS!
+
