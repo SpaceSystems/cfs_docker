@@ -9,3 +9,24 @@ Step 4: Run run_container.sh
 
 Step 5: You are now in a chroot ready to build and run cFS!
 
+
+Notes:
+
+Kill all running containers
+docker kill $(docker ps -q)
+
+Delete all stopped containers (including data-only containers)
+docker rm $(docker ps -a -q)
+
+Delete all 'untagged/dangling' (<none>) images
+docker rmi $(docker images -q -f dangling=true)
+
+Delete ALL images
+docker rmi $(docker images -q)
+
+Delete dangling volumes
+docker volume rm $(docker volume ls -f dangling=true -q)
+
+On Mac, get IP address of host machine from within Docker container
+host docker.for.mac.localhost
+
